@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Pixels are injected from product JSON (see app.js) -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title id="docTitle">Landing</title>
+    <link href="/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main class="container">
+      <!-- HERO -->
+      <header class="hero">
+        <h1 id="title"></h1>
+        <p class="subtitle" id="subtitle"></p>
+      </header>
+
+      <!-- CARD -->
+      <section class="card">
+        <!-- GALERÍA (3 IMÁGENES) -->
+        <div class="grid3" id="gallery"></div>
+
+        <!-- BENEFICIOS -->
+        <section class="benefits" id="benefits" aria-label="Beneficios"></section>
+
+        <!-- CTA ANTES DEL VIDEO -->
+        <div class="ctaRow ctaTop">
+          <a class="btn" id="buyBtnTop" href="#" rel="nofollow noopener">Comprar ahora</a>
+        </div>
+
+        <!-- VIDEO -->
+        <div class="videoWrap" aria-label="Video">
+          <iframe
+            id="video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            title="Video"
+          ></iframe>
+        </div>
+
+        <!-- CONTADOR (10 MIN) -->
+        <div class="offer offer10" aria-live="polite">
+          <span>🔥 Oferta especial termina en:</span>
+
+          <div class="countdown countdown10" aria-label="Contador">
+            <div>
+              <b id="mm">10</b>
+              <small>MIN</small>
+            </div>
+            <div>
+              <b id="ss">00</b>
+              <small>SEG</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- DESCRIPCIÓN (SEGUNDA) -->
+        <div class="textBlock" id="text2"></div>
+
+        <!-- CTA DESPUÉS DE LA DESCRIPCIÓN -->
+        <div class="ctaRow ctaMid">
+          <a class="btn" id="buyBtnMid" href="#" rel="nofollow noopener">Comprar ahora</a>
+        </div>
+
+        <!-- GARANTÍA -->
+        <section class="guarantee" aria-label="Garantía">
+          <div class="badge" aria-hidden="true">✓</div>
+          <p id="guaranteeText"></p>
+        </section>
+
+        <!-- BONOS -->
+        <h2 class="bonusTitle">Bonos incluidos</h2>
+        <section class="bonusWrap" id="bonusWrap" aria-label="Bonos"></section>
+
+        <!-- FAQ -->
+        <h2 class="faqTitle">Preguntas frecuentes</h2>
+        <section id="faqList" aria-label="Preguntas frecuentes"></section>
+
+        <!-- ✅ TARJETA OFERTA AL FINAL (ANTES DEL BOTÓN FINAL) -->
+        <div class="todayOfferCard" id="todayOffer" style="display:none;" aria-label="Oferta del día"></div>
+
+        <!-- CTA FINAL -->
+        <div class="ctaRow ctaBottom">
+          <a class="btn" id="buyBtnBottom" href="#" rel="nofollow noopener">Comprar ahora</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+
+    <!-- WhatsApp Bubble (link injected from JSON via app.js) -->
+    <a
+      class="whatsappBubble"
+      id="whatsappBubble"
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Abrir WhatsApp"
+      title="WhatsApp"
+    ></a>
+  </body>
+</html>

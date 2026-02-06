@@ -1,0 +1,515 @@
+/* ========= BASE ========= */
+body{
+  font-family:Poppins,system-ui,sans-serif;
+  background:linear-gradient(135deg,#e0f2fe,#fdf2f8,#ecfccb);
+  margin:0;
+  color:#0f172a;
+}
+
+.container{
+  max-width:1050px;
+  margin:auto;
+  padding:70px 25px;
+}
+
+/* ========= HERO ========= */
+.hero{
+  text-align:center;
+  margin-bottom:55px;
+}
+
+.hero h1{
+  font-size:clamp(48px,6vw,72px);
+  font-weight:900;
+
+  background:linear-gradient(90deg,#2563eb,#7c3aed);
+  -webkit-background-clip:text;
+  color:transparent;
+
+  margin-bottom:20px;
+}
+
+.subtitle{
+  font-size:22px;
+  max-width:800px;
+  margin:auto;
+  color:#334155;
+  line-height:1.7;
+}
+
+/* ========= CARD ========= */
+.card{
+  background:#fff;
+  padding:50px;
+  border-radius:28px;
+  box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+/* ========= IMÁGENES ========= */
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin-bottom:40px;
+}
+
+.imgCard{
+  border-radius:20px;
+  overflow:hidden;
+  aspect-ratio:3/4;
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+  transition:.35s;
+}
+
+.imgCard:hover{
+  transform:scale(1.05);
+}
+
+.imgCard img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ========= TEXTOS GRANDES ========= */
+.textBlock{
+  font-size:21px;        /* MÁS GRANDE */
+  line-height:1.9;       /* MÁS LEÍBLE */
+  color:#1e293b;
+  margin:35px 0;
+  text-align:center;
+}
+
+/* ========= VIDEO ========= */
+.videoWrap{
+  aspect-ratio:16/9;
+  border-radius:20px;
+  overflow:hidden;
+  margin:45px 0;
+  box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.videoWrap iframe{
+  width:100%;
+  height:100%;
+}
+
+/* =========================
+   ⏳ CONTADOR +50% MÁS GRANDE
+========================= */
+.offer{
+  background:#0f172a;
+  color:white;
+
+  border-radius:16px;
+
+  padding:14px 22px;   /* 🔥 +50% tamaño */
+  margin:26px 0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+
+  font-size:16px;   /* antes 12 → ahora más visible */
+  font-weight:700;
+}
+
+.offer span{
+  font-size:16px;
+  opacity:.9;
+}
+
+/* contenedor */
+.countdown{
+  display:flex;
+  gap:10px;
+}
+
+/* cajitas */
+.countdown div{
+  background:white;
+  color:#0f172a;
+
+  border-radius:12px;
+
+  padding:8px 10px;   /* 🔥 más grandes */
+  min-width:58px;
+
+  text-align:center;
+
+  box-shadow:0 8px 18px rgba(0,0,0,.18);
+}
+
+/* números */
+.countdown b{
+  font-size:26px;   /* 🔥 antes 15 → +50% */
+  font-weight:900;
+  line-height:1;
+}
+
+/* etiquetas */
+.countdown small{
+  font-size:11px;
+  opacity:.7;
+}
+
+
+/* ========= GARANTÍA ========= */
+.guarantee{
+  background:#dcfce7;
+  padding:25px;
+  border-radius:18px;
+  margin-top:35px;
+
+  font-size:18px;
+  font-weight:600;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+}
+
+.badge{
+  width:42px;
+  height:42px;
+  background:#22c55e;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:900;
+}
+
+/* =================================
+   🚀 BOTÓN HIPER LLAMATIVO
+================================= */
+.ctaRow{
+  text-align:center;
+  margin-top:50px;
+}
+
+/* =================================
+   🚀 BOTÓN IMPACTANTE (borde + brillo + pulso)
+================================= */
+.btn{
+  position: relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+
+  font-size:24px;
+  font-weight:1000;
+  letter-spacing:.2px;
+
+  padding:22px 80px;
+  border-radius:60px;
+
+  color:white;
+  text-decoration:none;
+
+  /* Fondo principal */
+  background: linear-gradient(45deg,#22c55e,#16a34a);
+
+  /* Borde impactante tipo neón */
+  border: 3px solid rgba(255,255,255,.65);
+
+  /* Sombra pro */
+  box-shadow:
+    0 28px 70px rgba(34,197,94,.55),
+    0 0 0 10px rgba(34,197,94,.15);
+
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
+
+/* Brillo animado */
+.btn::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:60px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.45), transparent 55%);
+  transform: translateX(-35%);
+  transition: transform .65s ease;
+  pointer-events:none;
+}
+
+/* Halo exterior (borde glow) */
+.btn::before{
+  content:"";
+  position:absolute;
+  inset:-8px;
+  border-radius:70px;
+  background: linear-gradient(90deg, rgba(37,99,235,.35), rgba(124,58,237,.35), rgba(34,197,94,.35));
+  filter: blur(12px);
+  opacity: .75;
+  z-index:-1;
+  pointer-events:none;
+}
+
+/* Hover = más grande + brillo */
+.btn:hover{
+  transform: scale(1.1);
+  filter: brightness(1.03);
+  box-shadow:
+    0 34px 90px rgba(34,197,94,.62),
+    0 0 0 12px rgba(34,197,94,.18);
+}
+
+.btn:hover::after{
+  transform: translateX(35%);
+}
+
+/* Animación pulso suave */
+@keyframes pulseGlow{
+  0%   { box-shadow: 0 28px 70px rgba(34,197,94,.55), 0 0 0 10px rgba(34,197,94,.15); }
+  50%  { box-shadow: 0 34px 90px rgba(34,197,94,.65), 0 0 0 14px rgba(34,197,94,.18); }
+  100% { box-shadow: 0 28px 70px rgba(34,197,94,.55), 0 0 0 10px rgba(34,197,94,.15); }
+}
+
+/* Icono flecha opcional dentro del botón (si lo quieres) */
+.btn span.arrow{
+  font-size:22px;
+  font-weight:1000;
+  opacity:.95;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .btn{ width:100%; padding:20px; }
+}
+
+/* ========= FAQ ========= */
+.faqTitle{
+  margin-top:55px;
+  font-size:30px;
+  font-weight:900;
+  text-align:center;
+}
+
+.faqItem{
+  margin-top:14px;
+  border-radius:16px;
+  border:1px solid #ddd;
+  overflow:hidden;
+}
+
+.faqQ{
+  padding:18px;
+  font-size:18px;
+  font-weight:700;
+  cursor:pointer;
+  background:#f8fafc;
+}
+
+.faqA{
+  padding:18px;
+  display:none;
+  font-size:17px;
+  color:#334155;
+}
+
+.faqItem.open .faqA{
+  display:block;
+}
+
+/* ========= MOBILE ========= */
+@media(max-width:900px){
+  .grid3{grid-template-columns:1fr}
+  .card{padding:25px}
+  .countdown{gap:18px}
+  .countdown b{font-size:40px}
+  .btn{width:100%;padding:20px}
+}
+
+/* ========= BENEFICIOS (TÍTULO + PÁRRAFOS + VIÑETAS ELEGANTES) ========= */
+.benefits{
+  margin:26px 0 34px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:22px;
+}
+.benefits h2{
+  margin:0 0 14px;
+  font-size:26px;
+  letter-spacing:-.2px;
+}
+.benefits .lead{
+  margin:0 0 18px;
+  opacity:.92;
+  line-height:1.5;
+}
+.benefitItem{
+  margin:14px 0 0;
+  padding:14px 14px;
+  border-radius:14px;
+  background:rgba(15,23,42,.06);
+  border:1px solid rgba(15,23,42,.08);
+}
+.benefitItem h3{
+  margin:0 0 8px;
+  font-size:18px;
+}
+.benefitItem p{
+  margin:0 0 10px;
+  line-height:1.55;
+  opacity:.92;
+}
+.benefitBullets{
+  margin:0;
+  padding-left:18px;
+}
+.benefitBullets li{
+  margin:6px 0;
+  line-height:1.45;
+}
+
+/* ========= BONOS (2 FOTOS 9:16) ========= */
+.bonusTitle{
+  margin:34px 0 12px;
+  font-size:24px;
+  text-align:center;
+}
+
+.bonusWrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:26px;
+  margin-top:10px;
+}
+
+.bonusItem{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.bonusHeading{
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:.5px;
+  text-align:center;
+  margin-bottom:12px;
+
+  background:linear-gradient(90deg,#2563eb,#7c3aed);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.bonusCard{
+  width:min(380px, 92%);
+  border-radius:18px;
+  overflow:hidden;
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(15,23,42,.12);
+  box-shadow:0 10px 22px rgba(15,23,42,.10);
+}
+
+.bonusCard img{
+  width:100%;
+  display:block;
+  aspect-ratio:9/16;
+  object-fit:cover;
+}
+
+/* WhatsApp bubble */
+.whatsappBubble{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 9999;
+  background: linear-gradient(45deg,#22c55e,#16a34a);
+  border: 3px solid rgba(255,255,255,.65);
+  box-shadow: 0 16px 50px rgba(0,0,0,.35);
+  transition: transform .15s ease;
+}
+.whatsappBubble svg{ width: 30px; height: 30px; fill: white; }
+.whatsappBubble:hover{ transform: translateY(-2px); }
+@media (max-width: 520px){
+  .whatsappBubble{ width: 58px; height: 58px; right: 14px; bottom: 14px; }
+  .whatsappBubble svg{ width: 28px; height: 28px; }
+}
+
+/* ========= OFERTA (SOLO HOY) — MÁS GRANDE + MATE + PARA PONER AL FINAL ========= */
+.todayOfferCard{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
+
+  padding:70px 80px;               /* 🔥 MUCHO MÁS GRANDE */
+  border-radius:32px;
+
+  background:#f2f4f8;               /* tono mate elegante */
+  border:2px solid rgba(124,58,237,.25);
+
+  box-shadow:0 40px 100px rgba(0,0,0,.12);
+
+  max-width:1200px;
+  margin:90px auto 35px;
+  text-align:center;
+}
+
+/* texto contenedor */
+.todayOfferCard .offerText{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* encabezado */
+.todayOfferCard .offerHeadline{
+  font-size:52px;          /* 🔥 enorme */
+  font-weight:1000;
+  margin:0;
+
+  background:linear-gradient(90deg,#2563eb,#7c3aed);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* 🔥🔥 EL NUMERO 10 GIGANTE 🔥🔥 */
+.todayOfferCard .offerPrice{
+  display:block;
+  font-size:110px;          /* ← ULTRA GRANDE */
+  font-weight:1000;
+  line-height:1;
+
+  background:linear-gradient(45deg,#22c55e,#16a34a);
+  -webkit-background-clip:text;
+  color:transparent;
+
+  margin:10px 0;
+  text-shadow:0 20px 60px rgba(34,197,94,.25);
+}
+
+/* texto pequeño */
+.todayOfferCard .offerContext{
+  font-size:22px;
+  opacity:.9;
+  margin-top:10px;
+}
+
+/* mobile */
+@media(max-width:680px){
+  .todayOfferCard{
+    padding:40px 25px;
+  }
+
+  .todayOfferCard .offerHeadline{font-size:34px;}
+  .todayOfferCard .offerPrice{font-size:70px;}
+}
