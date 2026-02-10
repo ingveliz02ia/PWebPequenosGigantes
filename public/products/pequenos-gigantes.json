@@ -80,13 +80,9 @@
   "timerMinutes": 10,
   "bonusImages": [
     {
-      "label": "Bonus 01",
+      "label": "Bonus",
       "src": "/assets/pequenos-gigantes/bonus-1.png"
-    },
-    {
-      "label": "Bonus 02",
-      "src": "/assets/pequenos-gigantes/bonus-2.png"
-    }
+    } 
   ],
   "whatsappLink": "https://wa.me/51987254809?text=Hola%2C%20quiero%20comprar%20Peque%C3%B1os%20Gigantes",
   "facebookPixelId": "TU_PIXEL_ID",
